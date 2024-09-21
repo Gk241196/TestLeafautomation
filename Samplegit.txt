@@ -1,0 +1,7 @@
+GIT:
+•	Git is one of the most popular version control systems. It is one of the distributed version control systems. It is an open-source project which is compatible with many operating systems and IDEs.
+•	It allows us to track changes in an application, or in a folder, or in a single file over time across different users, and different computers
+GITHUB:
+•	GitHub is a cloud-based Git repository hosting service. It lets individuals and teams work together on projects.
+•	Git is a command-line tool whereas GitHub comes with a web-based graphical interface. 
+•	GitHub is an application allowing you to store remote repositories on their servers.
