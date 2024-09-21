@@ -5,3 +5,4 @@ GITHUB:
 •	GitHub is a cloud-based Git repository hosting service. It lets individuals and teams work together on projects.
 •	Git is a command-line tool whereas GitHub comes with a web-based graphical interface. 
 •	GitHub is an application allowing you to store remote repositories on their servers.
+ Learning the git
