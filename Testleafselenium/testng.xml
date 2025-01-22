@@ -1,0 +1,41 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MyTestSuite" parallel="methods" thread-count="3">
+<!-- Define your test -->
+<listeners>
+        <listener class-name="Pageobjects.Listener" />
+    </listeners>
+    <test name="MyTest">
+       <classes>
+        <class name="Pageobjects.Listener"/>
+            
+        </classes>
+       
+         </test>
+</suite>
+       <!-- 
+		
+	    <parameter name="Name" value="Ganesh">
+        <classes>
+        <class name="Pageobjects.Parameterization"/>
+            
+        </classes>
+         
+        </parameter>
+    </test>
+</suite>
+         <groups>
+         <run>
+         <include name="Testcase1"></include>
+         <exclude name="Testcase2"></exclude>
+         <include name="Testcase3"></include>
+         <exclude name="Testcase4"></exclude>
+         </run>>
+         </groups>*/
+        <classes>
+            <class name="Pageobjects.Groupingpackage" />
+            <class name="Pageobjects.Testng"/>
+            <class name="pageobjects.TestNG2"/>
+            
+        </classes>
+    </test>
+</suite>-->
