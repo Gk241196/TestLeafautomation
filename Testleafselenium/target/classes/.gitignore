@@ -2,7 +2,6 @@
 /Brokenimages.class
 /Calendar.class
 /Checkboxes.class
-/Config.properties
 /DataDriven/
 /Downloadfile.class
 /Dragdrop.class
@@ -13,12 +12,12 @@
 /Iframes.class
 /Implicitwait.class
 /Links.class
-/META-INF/
 /POMtest.class
 /Pageobjects/
 /Radiobutton.class
 /Screenshot.class
 /Table.class
+/Test1.class
 /Testingtutorial1.class
 /Testingtutorial2.class
 /TutorialDropdown.class
@@ -26,4 +25,4 @@
 /Uploadfile.class
 /Window.class
 /amazon2.class
-/Test1.class
+/META-INF/

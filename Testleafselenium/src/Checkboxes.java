@@ -1,14 +1,15 @@
 import java.time.Duration;
 import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
-
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 public class Checkboxes {
 	public static void main(String[] args) {
+		@BeforeTest
 			WebDriver driver=new ChromeDriver();
 			System.setProperty("webdriver.chrome.driver","C:\\Chromedriver.exe");
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -30,7 +31,9 @@ public class Checkboxes {
 		                checkbox.click();
 		                System.out.println("Selected Options: " + checkboxText);
 		            }
-		        }	
+		        }
+            @AfterTest
+             driver.close();
 			}				
 	}
 
