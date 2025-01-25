@@ -3,14 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="AlertTutorial">
+      <class name="Tests.Selenium_Alerts">
         <methods>
-          <include name="confirmorcancel"/>
-          <include name="promptalert"/>
+          <include name="testConfirmAlert"/>
+          <include name="testPromptAlert"/>
           <include name="browserlaunch"/>
-          <include name="browserclose"/>
+          <include name="testSimpleAlert"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- AlertTutorial -->
+      </class> <!-- Tests.Selenium_Alerts -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
