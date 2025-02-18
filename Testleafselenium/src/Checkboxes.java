@@ -9,7 +9,6 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 public class Checkboxes {
 	public static void main(String[] args) {
-		@BeforeTest
 			WebDriver driver=new ChromeDriver();
 			System.setProperty("webdriver.chrome.driver","C:\\Chromedriver.exe");
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));

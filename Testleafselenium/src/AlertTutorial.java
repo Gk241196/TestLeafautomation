@@ -3,13 +3,14 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterTest;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeTest;
 
 public class AlertTutorial {
     WebDriver driver;
-
     @BeforeTest
     public void browserlaunch() {
         driver = new ChromeDriver();
@@ -18,20 +19,20 @@ public class AlertTutorial {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
-    @Test(priority = 0) // Handling Alert
+    @Test // Handling Alert
     public void HandlingAlert() {
         // Navigate to the alert section
-        driver.findElement(By.xpath("//*[@id=\"menuform:j_idt39\"]/a")).click();
-        driver.findElement(By.xpath("//*[@id=\"menuform:m_overlay\"]/a")).click();
+        driver.findElement(By.xpath("//*[@id='menuform:j_idt39']/a")).click();
+        driver.findElement(By.xpath("//*[@id='menuform:m_overlay']/a")).click();
 
         // Handle alert
-        driver.findElement(By.xpath("//*[@id=\"j_idt88:j_idt91\"]/span[2]")).click();
+        driver.findElement(By.xpath("//*[@id='j_idt88:j_idt91']/span[2]")).click();
         Alert alert = driver.switchTo().alert();
         System.out.println(alert.getText());
         alert.accept();
     }
 
-    @Test(priority = 1) // Confirm or Cancel
+    @Test(dependsOnMethods = {"HandlingAlert"}) // Confirm or Cancel
     public void confirmorcancel() {
         // Handle confirm/cancel alert
         driver.findElement(By.id("j_idt88:j_idt93")).click();
@@ -39,7 +40,7 @@ public class AlertTutorial {
         alert2.dismiss();
     }
 
-    @Test(priority = 2) // Prompt Alert
+    @Test(dependsOnMethods = {"confirmorcancel"}) // Prompt Alert
     public void promptalert() {
         // Handle prompt alert
         driver.findElement(By.id("j_idt88:j_idt104")).click();
@@ -48,7 +49,7 @@ public class AlertTutorial {
         alert3.accept();
     }
 
-    @AfterTest
+    @AfterMethod
     public void browserclose() {
         driver.quit(); // Close all browser windows and terminate the session
     }
